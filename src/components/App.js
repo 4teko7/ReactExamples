@@ -1,44 +1,38 @@
-import React from "react"
+import React, {Component} from "react"
+
+class App extends Component {
+    constructor(){
+        super();
+        this.state = {
+            count: 0
+        }
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(){
+        // this.setState({count:this.state.count + 1});
+
+        this.setState((prevState) => {
+            return {
+                count: prevState.count + 1
+            }
+        });
 
 
-function getImg(){return document.getElementById("img");}
+    }
+    render(){
+        var styles = {display:"grid",justifyContent:"center"};
+        var className = "container";
+        return(
+            <div className = {className} style = {styles}>
+                <span id = "count" >{this.state.count}</span>
+                <br />
+                <button onClick={this.handleClick} > Press </button>
+            </div>
 
-function changeImg(){
-    var img = getImg();
-    img.src = "https://via.placeholder.com/300";
-}
+        );
+    }
 
-function mauseOver(){
-    var img = getImg();
-    img.src = "https://via.placeholder.com/400";
-}
-
-function mauseLeave(){
-    var img = getImg();
-    img.src = "https://via.placeholder.com/150"
-}
-
-function checkBoxChange(){
-    var checkSpan = document.getElementById("checkSpan");
-    var checkBox = document.getElementById("checkBox");
-    checkSpan.innerHTML = checkBox.checked ? "You Checked !!!" : "Click On Check !";
-}
-
-function App(){
-
-    return (
-        <div>
-            <img onMouseOver={mauseOver} onMouseLeave={mauseLeave} id = "img" src = "https://via.placeholder.com/150"/>
-            <br />
-            <br />
-            <input id = "checkBox" onChange={checkBoxChange} type = "checkbox" /><span id="checkSpan" >Click On Check !</span>
-            <br />
-            <br />
-            <button onClick={changeImg}>Change Image</button>
-        </div>
-
-
-    );
 }
 
 export default App;
