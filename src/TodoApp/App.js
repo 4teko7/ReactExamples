@@ -14,11 +14,11 @@ class App extends Component {
 
     handleChange(id){
         this.setState(prevState =>{
-            var filteredTodos = prevState.todos.map(todo=>{
+            var filteredTodos = prevState.todos.filter(todo=>{
                 if(todo.id == id){
-                    todo.completed = !todo.completed;
+                    return false;
                 }
-                return todo;
+                return true;
             });
             
             
