@@ -10,16 +10,36 @@ class App extends Component {
         }
     }
 
+
+    static getDerivedStateFromProps(props,state){
+        // return the new, updated state based upon the props
+    }
+
+    getSnapshotBeforeUpdate(){
+        // create a backup of the current way things are.
+        // snapshot of current app.
+    }
+
+    // *************** Depricated ******************
+    // componentWillMount(){} 
+
     componentDidMount(){
         //After Displaying the content in the browser, this method will be called.
         // In this method, you can make some api calls
     }
 
-    componentWillReceiveProps(nextProps){    //This method is deprecated you can use it like UNSAFE_component...
-        if(nextProps.whatever !== this.props.whatever){
-            // do something
-        }
-    }
+
+    // *************** Depricated ******************
+    //This method is deprecated you can use it like UNSAFE_component...
+    // componentWillReceiveProps(nextProps){     
+    //     if(nextProps.whatever !== this.props.whatever){
+    //         // do something
+    //     }
+    // }
+
+
+    // *************** Depricated ******************
+    // componentWillUpdate(){}
 
     shouldComponentUpdate(nextProps, nextState){
         // return true if want it to update = re render()
@@ -28,8 +48,9 @@ class App extends Component {
 
 
     componentWillUnmount(){
-        // Component will disapper from the screen.
-
+        // teardown or cleanup your code before your component disappears
+        // Component will disappear from the screen.
+        // Remove event listener etc.
     }
 
     render(){

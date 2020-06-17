@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom';
 // import App from "./mauseClickHoverCheckbox/App"
 // import App from "./usingOfClassState/App"
 // import App from "./TodoApp/App"
-import App from "./LifeCycleMethods/App"
+// import App from "./LifeCycleMethods/App"
+import App from "./LifeCycleEx1/App"
 
 
 import './index.css';
