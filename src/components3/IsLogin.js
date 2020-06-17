@@ -8,8 +8,11 @@ class IsLogin extends Component {
         };
     }
         render(){
+            let wordDisplay;
+            wordDisplay = this.state.isLoggedIn ? "yes" : "No !";
             return(
-            <h3>Login Status : {this.state.isLoggedIn ? "Yes" : "No"}</h3>
+            // <h3>Login Status : {this.state.isLoggedIn ? "Yes" : "No"}</h3>
+            {wordDisplay}
             );
         }
    
