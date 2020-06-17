@@ -17,7 +17,7 @@ function Conditional(props){
    
     var symbol = "*******************************";
     var h3Style = {color: props.isLoading ? "red" : "green"}
-var h3 = <h3 style = {h3Style}>{symbol}</h3>
+    var h3 = <h3 style = {h3Style}>{symbol}</h3>
     return(
        <div style = {divStyle}>
             {h3}
