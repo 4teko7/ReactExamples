@@ -8,7 +8,9 @@ import ReactDOM from 'react-dom';
 // import App from "./TodoApp/App"
 // import App from "./LifeCycleMethods/App"
 // import App from "./LifeCycleEx1/App"
-import App from "./FetchingAPI/App"
+// import App from "./FetchingAPI/App"
+import App from "./Forms/App"
+
 
 
 import './index.css';

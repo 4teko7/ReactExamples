@@ -27,7 +27,6 @@ class App extends React.Component {
         var peopleComponentArray = []; 
         var length = this.state.people.length;
         var id = 0;
-        var idd = 0;
         for(var i = 0; i < length; i++){
             peopleComponentArray.push(<People key={id++} people={this.state.people[i]} />);
             peopleComponentArray.push(<hr />);
